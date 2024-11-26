@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #667aff;
+	--dark-color-b: #7386ff;
+	--light-color: #e6e9ff;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+	--primary-bg: #4a56e2; /* Gradient start */
+	--secondary-bg: #6a79f9; /* Gradient end */
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 8px 18px;
+	background: var(--primary-bg);
+	color: white;
+	border: none;
+	font-size: 18px;
+	border-radius: 5px;
+	transition: background 0.3s ease;
+}
+
+.btn:hover {
+	background: var(--dark-color-a);
+}
+
+/* Chat Page */
+.chat-container {
+	max-width: 1100px;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+	background: var(--primary-bg);
+	color: #fff;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 20px;
+	padding: 20px;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+}
+
+.chat-sidebar h2 {
+	font-size: 22px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 12px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+	font-size: 16px;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: auto;
+	border-radius: 10px;
+	background: var(--light-color);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages .message {
+	padding: 12px;
+	margin-bottom: 15px;
+	background-color: var(--primary-bg);
+	border-radius: 10px;
+	overflow-wrap: break-word;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages .message .meta {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	opacity: 0.8;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: #ccc;
+}
+
+.chat-messages .message .text {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.chat-form-container {
+	padding: 20px;
+	background-color: var(--primary-bg);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 10px;
+	height: 40px;
+	flex: 1;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+	transition: all 0.3s;
+}
+
+.chat-form-container input[type='text']:focus {
+	border-color: var(--dark-color-a);
+	box-shadow: 0 0 8px rgba(103, 122, 255, 0.5);
+}
+
+.chat-form-container button {
+	padding: 10px 15px;
+	background: var(--dark-color-a);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	transition: background 0.3s ease;
+}
+
+.chat-form-container button:hover {
+	background: var(--primary-bg);
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--primary-bg);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-b);
+	border-radius: 10px;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 10px;
+	height: 40px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 10px;
+	height: 40px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
