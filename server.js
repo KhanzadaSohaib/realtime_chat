@@ -14,6 +14,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+const PORT = process.env.PORT || 4000;
+const DATABASE_URL = process.env.DATABASE_URL;
+const API_KEY = process.env.API_KEY;
+
+console.log(`Server running on port ${PORT}`);
+console.log(`Database URL: ${DATABASE_URL}`);
+console.log(`API Key: ${API_KEY}`);
+
 //Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -67,7 +75,4 @@ io.on("connection", (socket) => {
     }
   });
 });
-
-const PORT = 3000 || process.env.PORT;
-
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
